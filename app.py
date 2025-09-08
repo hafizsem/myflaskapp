@@ -12,7 +12,8 @@ cols = ["Company Name", "Organisation Type", "Industry",
         "AI Governance", "AI Risk Control", "Business Use Case",
         "Data Quality", "Reference Data", "ML Infrastructure", "Data Infrastructure"]
 
-df = pd.read_excel(r"C:\Users\hafiz.ghani\Desktop\AIRI\Files\AIRI_25082025_10am.xlsx")
+# ✅ Use relative path (make sure AIRI_25082025_10am.xlsx is in same folder as app.py)
+df = pd.read_excel("AIRI_25082025_10am.xlsx")
 df = df[cols]
 
 df_long = df.melt(
@@ -362,4 +363,3 @@ def charts():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-
