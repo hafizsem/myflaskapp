@@ -1,1 +1,1 @@
-web: gunicorn AIRI:app
+web: gunicorn app:app
